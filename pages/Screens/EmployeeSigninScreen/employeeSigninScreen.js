@@ -2,7 +2,7 @@ import Link from "next/dist/client/link";
 import axios from "axios";
 import { useState } from "react";
 
-export default function LoginScreen() {
+export default function EmployeeSigninScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -15,7 +15,7 @@ export default function LoginScreen() {
     try {
       console.log(process.env.BASE_URL);
       const data = await axios.post(
-        "http://localhost:7071/api/signin",
+        "http://localhost:7071/api/employeesignin",
         loginData
       );
       console.log(data);
@@ -58,7 +58,7 @@ export default function LoginScreen() {
               <div className="flex justify-between">
                 <div>
                   <h2 className="text-2xl font-bold text-gray-800 text-left mb-5">
-                    Sign In
+                    Employee Sign In
                   </h2>
                 </div>
                 <div>
@@ -101,6 +101,7 @@ export default function LoginScreen() {
                     className="appearance-none border-2 border-gray-100 rounded-lg px-4 py-3 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 focus:shadow-lg"
                   />
                 </div>
+                
                 <div id="button" className="flex flex-col w-full my-5">
                   <button
                     type="button"
@@ -124,7 +125,7 @@ export default function LoginScreen() {
                           ></path>
                         </svg>
                       </div>
-                      <div className="font-bold">Sigin</div>
+                      <div className="font-bold">Signin</div>
                     </div>
                   </button>
                   <div className="flex justify-evenly mt-5">
@@ -137,18 +138,12 @@ export default function LoginScreen() {
                       </span>
                     </Link>
                     <Link
-                      href="/signup"
+                      href="/employeeSignup"
                       className="w-full text-center font-medium text-gray-500"
                     >
                       <span className="text-green-700 mx-1  self-center px-4 py-2 rounded-md hover:cursor-pointer">
-                        Signup!
+                        Employee Signup!
                       </span>
-                    </Link>
-
-                    <Link href="/employeeLogin">
-                      <button className="inline-block px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out mx-1">
-                        Employee Panel
-                      </button>
                     </Link>
                   </div>
                 </div>
