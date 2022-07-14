@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-image: url("../pages/Images/HomeScreen/Home.jpg");
+  background-image: url("../assets/images/home/home.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -27,16 +27,40 @@ a {
   display: flex;
   justify-content: space-between;
   height: 70px;
+  width: 100vw;
   align-items: center;
   color: aliceblue;
   background-color: transparent;
-  backdrop-filter: blur(2px);
-  padding-left: 2vw;
-  padding-right: 2vw;
+  backdrop-filter: blur(4px);
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.enterios {
+  font-weight: 500;
 }
 
 .link {
   padding-right: 1.5vw;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .link {
+    opacity: 0%;
+    font-size: 0%;
+  }
+}
+
+@media only screen and (max-width: 600px) {}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.link-main {
+  margin-right: 1vw;
 }
 
 /************************************************/
@@ -51,5 +75,3 @@ a {
   font-weight: bold;
   backdrop-filter: blur(1px);
 }
-
-
